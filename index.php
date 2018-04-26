@@ -29,6 +29,12 @@
              <?php echo $row['id']." ".$row['nombre'] ?><br>
            <?php endforeach; ?>
         </div>
+        <div class="col-md-6">
+          <input type="text" name="busqueda" id="busqueda" value=""><button type="button" name="button" id="btn">Try</button>
+          <div class="resultado" id="resultado">
+
+          </div>
+        </div>
       </div>
     </div>
 

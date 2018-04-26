@@ -9,12 +9,13 @@
 
     if(mysqli_num_rows($result)>0){
       foreach($result as $u){
-          echo $u['nombre']."<br>";
+          $var = $u['nombre']."<br>";
         }
     }else{
-      echo "No hay resultados";
+      $var = "No hay resultados";
     }
 
   }
+  echo $var;
 
  ?>

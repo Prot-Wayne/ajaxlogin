@@ -41,3 +41,33 @@ $(document).ready(function(){
 
   })
 })
+
+$("#btn").click(function(){
+  var item = $("#busqueda").val();
+  alert(item);
+
+  $.ajax({
+    url: "consulta.php",
+    type: "post",
+    data:{item: item},
+    dataype: "html",
+    success:function(response){
+      $("#resultado").html(response);
+    }
+  })
+})
+
+$(document).ready(function(){
+  $("#busqueda").keyup(function(){
+    var item = $(this).val();
+    $.ajax({
+      url: "consulta.php",
+      type: "post",
+      data:{item: item},
+      dataype: "html",
+      success:function(response){
+        $("#resultado").html(response);
+      }
+    })
+  })
+})
